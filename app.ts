@@ -1,41 +1,32 @@
-(() => {
-  // Tipos
-  const batman: string = 'Bruce';
-  const superman: string = 'Clark';
+// Funciones Básicas
+function sumar( a, b ){
+  return a + b;
+}
 
-  const existe: boolean = false;
+const contar = ( heroes ) => {
+  return heroes.length;
+}
+const superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
+contar(superHeroes);
 
-  // Tuplas
-  const parejaHeroes: [string, string] = [batman, superman];
-  const villano: [string, number, boolean] = ['Lex Lutor', 5, true];
-
-  // Arreglos
-  const aliados: string[] = ['Mujer Maravilla', 'Acuaman', 'San', 'Flash'];
-
-  //Enumeraciones
-  enum fuerza {
-    acuaman = 0,
-    batman = 1,
-    flash = 5,
-    superman = 100,
+//Parametros por defecto
+const llamarBatman = ( llamar ) => {
+  if( llamar ){
+    console.log("Batiseñal activada");
   }
+}
 
-  const fuerzaFlash: fuerza = fuerza.flash;
-  const fuerzaSuperman: fuerza = fuerza.superman;
-  const fuerzaBatman: fuerza = fuerza.batman;
-  const fuerzaAcuaman: fuerza = fuerza.acuaman;
+llamarBatman();
 
-  // Retorno de funciones
-  function activar_batiseñal(): string {
-    return 'activada';
-  }
+// Rest?
+const unirheroes = ( personas ) => {
+  return personas.join(", ");
+}
 
-  function pedir_ayuda(): void {
-    console.log('Auxilio!!!');
-  }
 
-  // Aserciones de Tipo
-  const poder: any = '100';
-  const largoDelPoder: number = (poder as string).length;
-  console.log(largoDelPoder);
-})();
+// Tipo funcion
+const noHaceNada = ( numero, texto, booleano, arreglo )=> {}
+
+// Crear el tipo de funcion que acepte la funcion "noHaceNada"
+let noHaceNadaTampoco;
+noHaceNadaTampoco = noHaceNada
