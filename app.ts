@@ -1,52 +1,82 @@
+type AutoHero = {
+  carroceria: string;
+  modelo: string;
+  antibalas: boolean;
+  pasajeros: number;
+  disparar?: () => void;
+};
 
 // Objetos
-const batimovil = {
-  carroceria: "Negra",
-  modelo: "6x6",
+const batimovil: AutoHero = {
+  carroceria: 'Negra',
+  modelo: '6x6',
   antibalas: true,
-  pasajeros:4
+  pasajeros: 4,
 };
 
-const bumblebee = {
-  carroceria: "Amarillo con negro",
-  modelo: "4x2",
+const bumblebee: AutoHero = {
+  carroceria: 'Amarillo con negro',
+  modelo: '4x2',
   antibalas: true,
-  pasajeros:4,
-  disparar(){ // El metodo disparar es opcional
-    console.log("Disparando");
-  }
+  pasajeros: 4,
+  disparar() {
+    // El metodo disparar es opcional
+    console.log('Disparando');
+  },
 };
-
 
 // Villanos debe de ser un arreglo de objetos personalizados
-const villanos = [{
-  nombre:"Lex Luthor",
-  edad: 54,
-  mutante:false
-},{
-  nombre: "Erik Magnus Lehnsherr",
-  edad: 49,
-  mutante: true
-},{
-  nombre: "James Logan",
-  edad: undefined,
-  mutante: true
-}];
+
+type Villano = {
+  nombre: string;
+  edad: number | undefined;
+  mutante: boolean;
+};
+
+const villanos: Villano[] = [
+  {
+    nombre: 'Lex Luthor',
+    edad: 54,
+    mutante: false,
+  },
+  {
+    nombre: 'Erik Magnus Lehnsherr',
+    edad: 49,
+    mutante: true,
+  },
+  {
+    nombre: 'James Logan',
+    edad: undefined,
+    mutante: true,
+  },
+];
 
 // Multiples tipos
 // cree dos tipos, uno para charles y otro para apocalipsis
-const charles = {
-  poder:"psiquico",
-  estatura: 1.78
+
+type Charle = {
+  poder: string;
+  estatura: number;
 };
 
-const apocalipsis = {
-  lider:true,
-  miembros: ["Magneto","Tormenta","Psylocke","Angel"]
-}
+type Apocalipsis = {
+  lider: boolean;
+  miembros: string[];
+};
+
+const charles: Charle = {
+  poder: 'psiquico',
+  estatura: 1.78,
+};
+
+const apocalipsis: Apocalipsis = {
+  lider: true,
+  miembros: ['Magneto', 'Tormenta', 'Psylocke', 'Angel'],
+};
 
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
-let mystique;
+
+let mystique: Charle | Apocalipsis;
 
 mystique = charles;
 mystique = apocalipsis;
