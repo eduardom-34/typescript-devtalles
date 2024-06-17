@@ -28,12 +28,12 @@
   const apocalipsis2 = Apocalipsis.callApocalipsis();
   const apocalipsis3 = Apocalipsis.callApocalipsis();
 
-  apocalipsis1.changeName('xavier');
+  // apocalipsis1.changeName('xavier');
 
   // const apocalipsis1 = new Apocalipsis('Soy Apocalipsis... el unico');
   // const apocalipsis2 = new Apocalipsis('Soy Apocalipsis... el unico');
   // const apocalipsis3 = new Apocalipsis('Soy Apocalipsis... el unico');
   
-  console.log(apocalipsis1, apocalipsis2, apocalipsis3);
+  // console.log(apocalipsis1, apocalipsis2, apocalipsis3);
 
 })()
