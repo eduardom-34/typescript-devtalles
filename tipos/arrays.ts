@@ -6,4 +6,6 @@
   villans.forEach((element) => {
     console.log(element.toUpperCase());
   });
+
+  numbers.forEach((element) => console.log(element));
 })();
