@@ -6,6 +6,4 @@
   const getName = (): void => {
     console.log('Viejo gtName');
   };
-
-  getName();
 })();

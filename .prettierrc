@@ -1,4 +1,4 @@
 {
-  "files.trimTrailingWhitespace": false,
-  "singleQuote": true
+  "singleQuote": true,
+  "files.trimTrailingWhitespace": true
 }
